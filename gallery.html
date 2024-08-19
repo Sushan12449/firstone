@@ -76,6 +76,42 @@ h1{
 	b{
 		 color: yellow;
 	}
+	      .loader {
+  width: 80px;
+  aspect-ratio: 1;
+  background: 
+    radial-gradient(farthest-side at top,#0000 calc(100% - 21px),lightblue calc(100% - 20px) 99%,#0000) bottom/100% 50%,
+    radial-gradient(farthest-side,lightblue 94%,#0000 ) left /20px 20px,
+    radial-gradient(farthest-side,lightblue 94%,#0000 ) right/20px 20px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  inset: auto 0 0;
+  margin: auto;
+  border-radius: 50%;
+  background: orange;
+  transform-origin: 50% -20px;
+  animation: l14 1s infinite cubic-bezier(0.5,623,0.5,-623);
+}
+@keyframes l14 { 
+ 100% {transform: rotate(0.5deg)}
+}
+/* HTML: <div class="loader"></div> */
+.loader1 {
+  width: 120px;
+  height: 20px;
+  -webkit-mask: radial-gradient(circle closest-side,#000 94%,#0000) left/20% 100%;
+  background: linear-gradient(#000 0 0) left/0% 100% no-repeat #ddd;
+  animation: l17 2s infinite steps(6);
+}
+@keyframes l17 {
+    100% {background-size:120% 100%}
+}
   </style>
 </head>
 <body bgcolor="#f99884">
@@ -90,7 +126,7 @@ h1{
 			</ul>
 		</div>	
 		<h1><u>MEMORIES</u></h1>
-		<p>Memories are my favorite place to be.The kind of bliss lost in the passage of time.</p>
+		<p>Memories are my favorite place to be.The kind of bliss lost in the passage of time.<div class="loader1"></div></p>
 	<div>
 	<img src="./images/yoho.jpeg">
 	<img src="./images/test1.jpeg">
@@ -125,6 +161,7 @@ h1{
 	<video controls >
 		<source src="./images/v3.mp4" type="video/mp4">
 	</video>
+		<div class="loader"></div>
 
 
 	<p><b>N.T.N:</b>   Friendship is a special part of our lives that goes beyond just hanging out or having fun. Friends from the past, in particular, hold a special place in our hearts. They are more than just memories; they represent important moments in our lives, shared experiences, and personal growth.Friends from the past are more than just memories; they are important parts of our personal story and emotional well-being. They help us reflect on our growth, make us feel nostalgic, and teach us valuable lessons about relationships. Even as life changes and we move forward, the friendships we’ve built over the years remain a cherished and meaningful part of our journey. </p> </div> </body> </html>
